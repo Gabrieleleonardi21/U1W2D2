@@ -191,6 +191,24 @@ console.table(utenti);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const prodotto = [
+  { nome: "Mela", prezzo: 0.8, disponibile: true },
+  { nome: "Laptop", prezzo: 799.99, disponibile: true },
+  { nome: "Penna", prezzo: 1.5, disponibile: false },
+  { nome: "Monitor", prezzo: 249.99, disponibile: true },
+];
+
+for (let i = 0; i < prodotto.length; i++) {
+  const { nome, prezzo, disponibile } = prodotto[i];
+
+  if (disponibile && prezzo < 10) {
+    console.log(`OFFERTA: ${nome} (${prezzo}€)`);
+  } else if (disponibile && prezzo >= 10) {
+    console.log(`${nome} — ${prezzo}€`);
+  } else {
+    console.log(`${nome} — esaurito`);
+  }
+}
 
 /* --EXTRA-- ESERCIZIO 13 — Reverse manuale
    Array [1, 2, 3, 4, 5].
