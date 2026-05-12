@@ -96,6 +96,12 @@ totaleFinale = totale + spedizione;
 console.log(`Totale finale: ${totaleFinale}€`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const totalecarello =
+  totale >= 50
+    ? `Totale carrello: ${totale}€ Spedizione Gratutia - Totale Finale${totale}`
+    : `Totale carrello: ${totale}€ Spedizione: 9.90€ -Totale Finale ${totale + 9.9}€`;
+console.log(totalecarello);
+
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, "ciao", true]).
    Con un for + if, per ogni elemento stampa "x è un numero" o "x non è un numero".
