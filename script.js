@@ -93,7 +93,7 @@ if (totale >= spedizioneGratuita) {
   spedizione = costoSpedizione;
 }
 totaleFinale = totale + spedizione;
-console.log(`Totale finale: ${totaleFinale.toFixed(2)}€`);
+console.log(`Totale finale: ${totaleFinale}€`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7 — typeof check
