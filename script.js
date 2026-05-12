@@ -50,7 +50,7 @@ console.log(utente.indirizzo.cap);
    Sull'oggetto "persona", variabile chiave = "nome".
    Stampa il valore con bracket notation usando la variabile chiave.
 */
-const variabileChiave = "nome";
+let variabileChiave = "nome";
 console.log(persona[variabileChiave]);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -59,18 +59,18 @@ console.log(persona[variabileChiave]);
    Tre numeri a, b, c.
    Con if/else if, stampa il più grande. Se pareggio al massimo, stampa "Pareggio".
 */
-let a = 5;
-let b = 5;
-let c = 5;
+let a = 35;
+let b = 45;
+let c = 45;
 
-if (a === b || b === c || c == a) {
-  console.log(`pareggio`);
-} else if (a > b && a > c) {
-  console.log(`il più grande è`);
+if (a > b && a > c) {
+  console.log(`il numero più grande è ${a}`);
 } else if (b > a && b > c) {
-  console.log(`il più grande è`);
+  console.log(`il numero più grande è ${b}`);
+} else if (c > a && c > b) {
+  console.log(`il numero più grande è ${c}`);
 } else {
-  console.log(`il più grande è`);
+  console.log(`Pareggio`);
 }
 /* SCRIVI QUI LA TUA RISPOSTA */
 
