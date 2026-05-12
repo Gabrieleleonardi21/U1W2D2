@@ -155,7 +155,7 @@ if (prodotti.includes(cercato)) {
 } else {
   console.log(`${cercato}è in carrello: false`);
 }
-
+prodotti.splice(2, 1);
 const posizione = prodotti.indexOf(cercato);
 if (posizione !== -1) {
   console.log(`posizione: ${posizione}`);
