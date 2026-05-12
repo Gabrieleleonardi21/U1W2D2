@@ -37,9 +37,13 @@ console.log(persona);
    Stampa solo il CAP con dot notation.
 */
 const utente = [
-  `Gabriele`,
-  28,
-  { via: `Giovanni Miani`, citta: `Roma`, cap: `00149` },
+  `gabriele`,
+  25,
+  {
+    via: `Giovanni Miani`,
+    citta: `Roma`,
+    cap: `00149`,
+  },
 ];
 console.log(utente[2].cap);
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -57,7 +61,19 @@ console.log(persona[variabileChiave]);
    Tre numeri a, b, c.
    Con if/else if, stampa il più grande. Se pareggio al massimo, stampa "Pareggio".
 */
+let a = 5;
+let b = 5;
+let c = 5;
 
+if (a === b || b === c || c == a) {
+  console.log(`pareggio`);
+} else if (a > b && a > c) {
+  console.log(`il più grande è`);
+} else if (b > a && b > c) {
+  console.log(`il più grande è`);
+} else {
+  console.log(`il più grande è`);
+}
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6 — E-commerce: spedizione
@@ -67,6 +83,19 @@ console.log(persona[variabileChiave]);
    Risolvi una volta con if/else e una volta con ternario.
 */
 
+let totale = 35;
+let spedizione;
+let totaleFinale;
+
+const spedizioneGratuita = 50;
+const costoSpedizione = 9.9;
+if (totale >= spedizioneGratuita) {
+  spedizione = 0;
+} else {
+  spedizione = costoSpedizione;
+}
+totaleFinale = totale + spedizione;
+console.log(`Totale finale: ${totaleFinale.toFixed(2)}€`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7 — typeof check
@@ -76,18 +105,38 @@ console.log(persona[variabileChiave]);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const arrayMisto = [42, "ciao", true];
+
+for (let i = 0; i < arrayMisto.length; i++) {
+  let elemento = arrayMisto[i];
+  if (typeof elemento === "number") {
+    console.log(elemento + " è un numero");
+  } else {
+    console.log(elemento + " non è un numero");
+  }
+}
+
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
    Stampa array e length.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const myArray = [];
+myArray.push(1, 2, 3, 4, 5);
+myArray.unshift(0);
+console.log(myArray, myArray.length);
 
 /* ESERCIZIO 9 — Carrello con splice
    Array ["Penna", "Quaderno", "Zaino", "Astuccio"].
    Con splice: rimuovi "Quaderno", poi inserisci "Diario" al suo posto.
    Stampa dopo ogni operazione.
 */
+const mioArray = ["penna", "quaderno", "Zaino", "Astuccio"];
+mioArray.splice(1, 1);
+console.log(mioArray);
+mioArray.splice(1, 0, `Diario`);
+console.log(mioArray);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -99,7 +148,20 @@ console.log(persona[variabileChiave]);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const prodotti = ["Penna", "Quaderno", "Zaino"];
+const cercato = "Zaino";
+if (prodotti.includes(cercato)) {
+  console.log(`${cercato} è in carrello: true`);
+} else {
+  console.log(`${cercato}è in carrello: false`);
+}
 
+const posizione = prodotti.indexOf(cercato);
+if (posizione !== -1) {
+  console.log(`posizione: ${posizione}`);
+} else {
+  console.log("Non in carrello");
+}
 /* ESERCIZIO 11 — Lista utenti
    Array utenti di 3 oggetti { nome, eta }.
    Con un for, stampa ogni utente: "Mario (25 anni)".
@@ -107,6 +169,18 @@ console.log(persona[variabileChiave]);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const utenti = [
+  { nome: "Mario", eta: 25 },
+  { nome: "Luigi", eta: 30 },
+  { nome: "Anna", eta: 22 },
+];
+
+for (let i = 0; i < utenti.length; i++) {
+  console.log(`${utenti[i].nome} (${utenti[i].eta} anni)`);
+}
+
+console.table(utenti);
 
 /* ESERCIZIO 12 — Inventario disponibili
    Array prodotti di 4 oggetti { nome, prezzo, disponibile }.
