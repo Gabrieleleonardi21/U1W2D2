@@ -36,16 +36,14 @@ console.log(persona);
    Oggetto "utente" con una proprietà "indirizzo" (oggetto con via, citta, cap).
    Stampa solo il CAP con dot notation.
 */
-const utente = [
-  `gabriele`,
-  25,
-  {
+const utente = {
+  indirizzo: {
     via: `Giovanni Miani`,
     citta: `Roma`,
     cap: `00149`,
   },
-];
-console.log(utente[2].cap);
+};
+console.log(utente.indirizzo.cap);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 4 — Bracket dinamica
