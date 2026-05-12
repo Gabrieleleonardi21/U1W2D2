@@ -137,6 +137,7 @@ console.log(myArray, myArray.length);
    Stampa dopo ogni operazione.
 */
 const mioArray = ["penna", "quaderno", "Zaino", "Astuccio"];
+console.log(mioArray);
 mioArray.splice(1, 1);
 console.log(mioArray);
 mioArray.splice(1, 0, `Diario`);
@@ -152,15 +153,15 @@ console.log(mioArray);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const prodotti = ["Penna", "Quaderno", "Zaino"];
-const cercato = "Zaino";
+let prodotti = ["Penna", "Quaderno", "Zaino"];
+let cercato = "Zaino";
 if (prodotti.includes(cercato)) {
   console.log(`${cercato} è in carrello: true`);
 } else {
   console.log(`${cercato}è in carrello: false`);
 }
 prodotti.splice(2, 1);
-const posizione = prodotti.indexOf(cercato);
+let posizione = prodotti.indexOf(cercato);
 if (posizione !== -1) {
   console.log(`posizione: ${posizione}`);
 } else {
@@ -196,7 +197,7 @@ console.table(utenti);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const prodotto = [
-  { nome: "Mela", prezzo: 0.8, disponibile: true },
+  { nome: "dvd", prezzo: 0.8, disponibile: true },
   { nome: "Laptop", prezzo: 799.99, disponibile: true },
   { nome: "Penna", prezzo: 1.5, disponibile: false },
   { nome: "Monitor", prezzo: 249.99, disponibile: true },
@@ -204,10 +205,9 @@ const prodotto = [
 
 for (let i = 0; i < prodotto.length; i++) {
   const { nome, prezzo, disponibile } = prodotto[i];
-
-  if (disponibile && prezzo < 10) {
+  if (disponibile && prezzo < 50) {
     console.log(`OFFERTA: ${nome} (${prezzo}€)`);
-  } else if (disponibile && prezzo >= 10) {
+  } else if (disponibile && prezzo >= 50) {
     console.log(`${nome} — ${prezzo}€`);
   } else {
     console.log(`${nome} — esaurito`);
@@ -222,3 +222,9 @@ for (let i = 0; i < prodotto.length; i++) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const myNumbers = [1, 2, 3, 4, 5];
+const inverso = [];
+for (let i = myNumbers.length; i >= 1; i--) {
+  inverso.push(myNumbers[i - 1]);
+}
+console.log(inverso);
